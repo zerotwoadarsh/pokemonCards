@@ -40,8 +40,8 @@ let generateCard = (data) => {
     </div>
     `
 
-    appendTypes(data.types);
-    
+    appendTypes(data.types)
+
 }
                 btn.addEventListener("click", getData);
                 window.addEventListener("load", getData);
