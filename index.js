@@ -39,6 +39,9 @@ let generateCard = (data) => {
     <p>Speed ${statSpeed}</p>
     </div>
     `
+
+    appendTypes(data.types);
+    
 }
                 btn.addEventListener("click", getData);
                 window.addEventListener("load", getData);
