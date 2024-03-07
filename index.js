@@ -24,8 +24,8 @@ let generateCard = (data) => {
     const statAttack = data.stats[1].base_stat;
     const statDefence = data.stats[2].base_stat;
     const statSpeed = data.stats[5].base_stat;
-    
-    
+
+
     card.innerHTML = `
     <p class="hp">
     <span>HP</span>
@@ -40,8 +40,16 @@ let generateCard = (data) => {
     </div>
     `
 
-    appendTypes(data.types)
+    appendTypes(data.types);
 
 }
-                btn.addEventListener("click", getData);
-                window.addEventListener("load", getData);
+
+let appendTypes = (types) => {
+    types.forEach(item => {
+        let span = document.createElement("SPAN");
+        span.textContent = item.type.name;
+        document.querySelector(".types").appendChild(span)
+    })
+};
+btn.addEventListener("click", getData);
+window.addEventListener("load", getData);
