@@ -40,6 +40,8 @@ let generateCard = (data) => {
     </div>
     `
 
+
+    
     appendTypes(data.types);
 
 }
